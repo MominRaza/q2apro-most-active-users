@@ -61,7 +61,6 @@ class qa_most_active_users {
 		$avatarSize = qa_opt('avatar_users_size'); // if you want the avatars in another size, define a value here, e.g. 40
 		$showActivityPoints = true; 		// show activity points behind username
 		$showTotalPoints = false; 			// show total points behind activity points
-		$creditDeveloper = true;			// say thank you to the developer, this adds a hidden link to the developer's forum
 		
 		/* TRANSFER LANGUAGE STRINGS */
 		$localcode = qa_lang_html('qa_most_active_users_lang/localcode');	// displays the month name in your defined language, e.g. en_US
@@ -142,10 +141,7 @@ class qa_most_active_users {
 		$themeobject->output('<div id="mostactiveusers">');
 		$themeobject->output('<div class="qa-nav-cat-list">'.$langActUsers.'<br />'.(!$doWeek && $displayMonthName ? $monthName : $langInterval).':</div>'); // todo: 
 		$themeobject->output( $topusers );
-		// as said, this is one chance to say thank you to the developer
-		if($creditDeveloper) {
-			$themeobject->output("<a style='display:none' href='http://www.gute-mathe-fragen.de/'>Gute Mathe-Fragen - Bestes Mathe-Forum</a>");
-		}
+
 		$themeobject->output('</div>');
 		
 		/* 	Tip: you can style the most active user box by css selector: #mostactiveusers
