@@ -1,7 +1,7 @@
 <?php
 /*
 	Plugin Name: Most active users (per time interval)
-	Plugin URI: https://www.github.com/echteinfachtv/q2a-most-active-users/
+	Plugin URI: 
 	Plugin Description: Displays the most active users of the current week or month in a widget
 	Plugin Version: 1.2
 	Plugin Date: 2013-02-07
@@ -9,7 +9,7 @@
 	Plugin Author URI: http://www.echteinfach.tv/
 	Plugin License: GPLv3
 	Plugin Minimum Question2Answer Version: 1.4
-	Plugin Update Check URI: https://raw.github.com/echteinfachtv/q2a-most-active-users/master/qa-plugin.php
+	Plugin Update Check URI: 
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
