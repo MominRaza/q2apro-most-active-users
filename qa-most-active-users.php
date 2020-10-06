@@ -126,7 +126,7 @@ class qa_most_active_users {
 		$nrUsers = 0;
 		foreach ($users as $key => $val) {
 			$nrUsers++;
-			$pointString = $showActivityPoints ? '<span class="mau_points"> - '.$val.($showTotalPoints ? '/'.$totalPoints[$key] : '').' '.$langPoints.'</span>': '';
+			$pointString = $showActivityPoints ? '<span class="mau_points">'.$val.($showTotalPoints ? '/'.$totalPoints[$key] : '').' '.$langPoints.'</span>': '';
 			$topusers .= '<li>'.$avatarImages[$key].' '.qa_get_one_user_html($key, false) . $pointString . '</li>';
 			// max users to display 
 			if($nrUsers>=$maxusers) break;
@@ -147,10 +147,12 @@ class qa_most_active_users {
 		/* 	Tip: you can style the most active user box by css selector: #mostactiveusers
 			Example below: 
 		*/
-		$themeobject->output('<style type="text/css">#mostactiveusers { padding:5px 10px; border:1px solid #DDD; border-radius:10px; box-shadow: 0 1px 1px #AAA; background: rgb(245,245,245); background: -moz-linear-gradient(-45deg, rgb(245,245,245) 0%, rgb(226,226,226) 100%); background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgb(245,245,245)), color-stop(100%,rgb(226,226,226))); background: -webkit-linear-gradient(-45deg, rgb(245,245,245) 0%,rgb(226,226,226) 100%); background: -o-linear-gradient(-45deg, rgb(245,245,245) 0%,rgb(226,226,226) 100%); background: -ms-linear-gradient(-45deg, rgb(245,245,245) 0%,rgb(226,226,226) 100%); background: linear-gradient(135deg, rgb(245,245,245) 0%,rgb(226,226,226) 100%); }
-#mostactiveusers img { border:1px solid #CCC; vertical-align:middle; margin-bottom:5px; }
-#mostactiveusers ol { margin:0; padding-left:20px; }
-#mostactiveusers .qa-nav-cat-list { margin:5px 0 10px 0; }
+		$themeobject->output('<style type="text/css">
+			#mostactiveusers .qa-nav-cat-list{margin-bottom: 16px;font-weight: 500;}
+			#mostactiveusers ol{list-style: none;}
+			#mostactiveusers li{padding-left: 56px;min-height: 60px;}
+			#mostactiveusers .qa-avatar-link{position: absolute;height: 46px;width: 46px;margin-left: -56px;border-radius: 50%;overflow: hidden;}
+			#mostactiveusers .qa-user-link{display: block;font-weight: 500;margin-bottom: 3px;}
 		</style>');
 
 	}
